@@ -96,7 +96,7 @@ public class ClienteDAO {
     
     }
     
-    public List<Cliente> listarTUdo(){
+    public List<Cliente> listarTudo(){
     if(db.Connect()){
         List<Cliente> clientes = new ArrayList();
          sql = "SELECT * FROM tb_clientes";

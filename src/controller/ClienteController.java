@@ -2,6 +2,8 @@ package controller;
 
 import dao.ClienteDAO;
 import dao.SexoDAO;
+import java.util.ArrayList;
+import java.util.List;
 import model.Cliente;
 import model.Sexo;
 
@@ -20,5 +22,11 @@ public class ClienteController {
         }
         
     return false;
+    }
+    public void listar(){
+       ClienteDAO cdao = new ClienteDAO();
+       for (Cliente c : cdao.listarTudo()){
+           System.out.println("Id: " + c.getId() + "\nCPF: "+ c.getCpf() +"\nnome: " + c.getNome() + "\n Sexo: " + c.getSexo().getSigla());
+       }
     }
 }

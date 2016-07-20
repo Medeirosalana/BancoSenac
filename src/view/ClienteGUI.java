@@ -3,6 +3,7 @@ package view;
 import controller.ClienteController;
 
 import java.util.Scanner;
+import model.Cliente;
 
 
 public class ClienteGUI {
@@ -27,9 +28,21 @@ public class ClienteGUI {
          }
         
         }
+    public void buscarTudo(){
+    
+    ClienteController cc = new ClienteController();
+    
+        cc.listar();
+     
+     }
+    
+    
+    
         public static void main(String[] args) {
          ClienteGUI gui = new ClienteGUI();
-         gui.cadastrar();
+         gui.buscarTudo();
+         
+        
     }
     
     }
